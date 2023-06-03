@@ -18,6 +18,13 @@ func NewError(code string) Error {
 	}
 }
 
+func NewRawError(code string, message string) Error {
+	return &errorImp{
+		code:    code,
+		message: message,
+	}
+}
+
 type errorImp struct {
 	code    string
 	message string
